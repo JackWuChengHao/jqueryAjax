@@ -23,7 +23,7 @@
                 fn.error(XMLHttpRequest, textStatus, errorThrown);
             },
             success:function(data, textStatus){
-                //成功回调方法增强处理
+                //成功回调方法增强处 理
                 fn.success(data, textStatus);
             },
             beforeSend:function(XHR){
