@@ -28,12 +28,11 @@
             },
             beforeSend:function(XHR){
                 //提交前回调方法
-                $('body').append("<div id='loading'></div>");
-                $("#loading").busyLoad("show");
+            	$.loader = $("<div id='loading' class='loader'></div>");
+                $('body').append($.loader);
+                $.loader.html("<div class='loading-1'></div><div class='loading-2'>Loading...</div>");
             },
             complete:function(XHR, TS){
-                //请求完成后回调函数 (请求成功或失败之后均调用)。
-            	$("#loading").busyLoad("hide");
             	$("#loading").remove();
             }
         });
