@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>quickcover...</title>
+<link rel="stylesheet" href="./css/app.css" />
+
+</head>
+<body>
+		<input type="button"  value="点击" onclick="sendmsg()"/>
+</body>
+<script src="./js/jquery-3.3.1.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/ajax.js"></script>
+
+<script type="text/javascript">
+
+	function sendmsg(){
+		$.ajax({
+			url:"./testres/test.json",
+			success:function(){
+				alert("ok");
+			},
+			fail:function(){
+				alert("fail");
+			}
+		});
+		
+	}
+
+</script>
+
+</html>
